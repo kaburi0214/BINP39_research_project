@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+.ipynb_checkpoints/
+
+# Raw data file
+raw_data/*
+
+# Result anndata and csv files
+results/anndata/*.h5ad
+results/csv/*.csv
+
+# Model checkpoints
+results/model/cellflow_checkpoints/**/*.pkl
+
+# Tuning files
+kt_tuning/
+
