@@ -82,7 +82,7 @@ python -m ipykernel install --user --name cellflow --display-name "Python (cellf
 jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root
 ```
 
-### 4) Script running
+## 4) Script running
 After activating the specific conda environment for certain notebook(s), run:
 ```bash
 jupyter notebook
