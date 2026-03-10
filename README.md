@@ -95,4 +95,4 @@ Afterwards, just run each notebook:
  - **`gen_v3.ipynb`** predicts reprogramming effects for hold-out TF combinations using the CellFlow generative model.
 
  **Notes:** While running all cells sequentially is recommended for complete reproduction, you can also pre-download all processed datasets and pre-trained models from `results/` folder from the server (inf-48-2024@130.235.8.214:/home/inf-48-2024/binp39/cell_reprogram/cellrp)
-to skip computationally intensive steps. Some smaller model files (.pkl) are also available in this repository's `results/` folder.
+to skip computationally intensive steps. Some smaller model files are also available in this repository's `results/` folder.
