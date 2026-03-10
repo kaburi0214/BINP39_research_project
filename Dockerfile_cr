@@ -1,0 +1,18 @@
+FROM cellrp_base
+WORKDIR /usr/local/cellrp
+
+# Copy environment file
+COPY env_cr.yml .
+
+# Creat conda environment
+RUN conda env create -f env_cr.yml
+
+# Activate env for later RUN
+SHELL ["conda", "run", "-n", "cr", "/bin/bash", "-c"]
+
+# Copy data and scripts
+COPY processing_v2.ipynb .
+COPY *.py .
+COPY predict* .
+
+CMD ["/bin/bash"]

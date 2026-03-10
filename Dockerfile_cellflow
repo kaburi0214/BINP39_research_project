@@ -1,0 +1,16 @@
+FROM cellrp_base
+WORKDIR /usr/local/cellrp
+
+# Copy environment file
+COPY env_cellflow.yml .
+
+# Creat conda environment
+RUN conda env create -f env_cellflow.yml
+
+# Activate env for later RUN
+SHELL ["conda", "run", "-n", "gen", "/bin/bash", "-c"]
+
+# Copy data and scripts
+COPY gen_v3.ipynb .
+
+CMD ["/bin/bash"]
