@@ -21,7 +21,7 @@ working_folder/
 │  ├── figures
 │  ├── model
 ├── kt_tuning/         # model tuning details 
-├── python scripts     # Python modules (models_v1.py, estimator_v1.py)
+├── python scripts     # Python modules defining model architectures and the estimator framework imported by notebooks (models_v1.py, estimator_v1.py)
 ├── jupyter notebooks  # Jupyter notebooks for data processing and analysis (processing_v2.ipynb, predict_00.ipynb, predict_01.ipynb, gen_v3.ipynb)
 ├── environment files  # Docker and conda environment files (Dockerfile_base, Dockerfile_cellflow, Dockerfile_cr, env_cellflow.yml, env_cr.yml)
 └── README.md          # Project documentation 
