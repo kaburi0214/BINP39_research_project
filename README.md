@@ -16,17 +16,24 @@ We start by creating a working directory for this project to store all datasets,
 working_folder/
 ├── raw_data/          # Raw datasets
 ├── results/           # Analysis output files, figures, trained models
-│  ├── anndata
-│  ├── csv
-│  ├── figures
-│  ├── model
+│  ├── anndata/
+│  ├── csv/
+│  ├── figures/
+│  ├── model/
 ├── kt_tuning/         # model tuning details 
 ├── python scripts     # Python modules defining model architectures and the estimator framework imported by notebooks (models_v1.py, estimator_v1.py)
 ├── jupyter notebooks  # Jupyter notebooks for data processing and analysis (processing_v2.ipynb, predict_00.ipynb, predict_01.ipynb, gen_v3.ipynb)
 ├── environment files  # Docker and conda environment files (Dockerfile_base, Dockerfile_cellflow, Dockerfile_cr, env_cellflow.yml, env_cr.yml)
 └── README.md          # Project documentation 
 ```
-**Note:** Only the `raw_data/` folder and its contents, along with all python scripts, jupyter notebooks and environment files need to be prepared initially. Other directories (`results/`, `kt_tuning/`) can be automatically generated during analysis execution.
+
+Clone this repository by:
+```bash
+git clone https://github.com/kaburi0214/BINP39_research_project.git
+```
+after creating the working folder and moving in it. The repository on GitHub contains some files, like: python scripts, jupyter notebooks and environment files, organized differently from the recommended working directory. For reproducibility, please follow the working directory structure described above when setting up your local environment. 
+
+**Notes:** Only the `raw_data/` folder and its contents, along with all python scripts, jupyter notebooks and environment files need to be prepared initially. Other directories (`results/`, `kt_tuning/`) can be automatically generated during analysis execution.
 
 ## 2) Data acquisition
 All required datasets are available through this [Google Drive](https://drive.google.com/drive/folders/1ofBo4uFd4TTm_Nqm2lzn2D142y4k3VCI?usp=sharing)
@@ -94,5 +101,4 @@ Afterwards, just run each notebook:
  - **`predict_01.ipynb`** is for reprogramming transcriptomic expression prediction using linear and non-linear neural network models.
  - **`gen_v3.ipynb`** predicts reprogramming effects for hold-out TF combinations using the CellFlow generative model.
 
- **Notes:** While running all cells sequentially is recommended for complete reproduction, you can also pre-download all processed datasets and pre-trained models from `results/` folder from the server (inf-48-2024@130.235.8.214:/home/inf-48-2024/binp39/cell_reprogram/cellrp)
-to skip computationally intensive steps. Some smaller model files are also available in this repository's `results/` folder.
+ **Notes:** While running all cells sequentially is recommended for complete reproduction, you can also pre-download all processed datasets and pre-trained models from `results/` folder from the server (inf-48-2024@130.235.8.214:/home/inf-48-2024/binp39/cell_reprogram/cellrp) to skip computationally intensive steps. Some smaller model files are also available in this repository's `results/` folder.
